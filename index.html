@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiny Whispers</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cloud Layer -->
+  <div class="cloud-layer"></div>
+
+  <!-- Hearts Layer -->
+  <div id="hearts-container"></div>
+
+  <!-- Main Card -->
+  <div class="card">
+    <img src="assets/bunny.png" class="bunny-top" alt="bunny">
+    <h1>Tell Me Tiny Things</h1>
+    <p class="subtitle">Send a soft anonymous whisper 💌</p>
+
+    <form action="success.html" method="POST" id="whisperForm">
+      <textarea name="message" id="message" maxlength="300" placeholder="Your tiny whisper..." required></textarea>
+      <input type="text" name="codename" placeholder="Optional codename…">
+
+      <button type="submit" class="send-btn">Send Whisper</button>
+    </form>
+
+    <!-- Buttons Row -->
+    <div class="toolbar">
+      <button id="modeToggle">🌙</button>
+      <button id="musicToggle">🎵</button>
+    </div>
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bgm" loop>
+    <source src="assets/bgm.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Typing + Send SFX -->
+  <audio id="typeSound">
+    <source src="assets/type.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="sendSound">
+    <source src="assets/send.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="main.js"></script>
+</body>
+</html>
